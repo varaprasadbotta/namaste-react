@@ -1,1 +1,1 @@
-Namaste React course by akshya saini
+Namaste React course by prasad botta
