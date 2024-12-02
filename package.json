@@ -2,13 +2,20 @@
   "name": "namaste-react",
   "version": "1.0.0",
   "description": "this is a react application ",
-  "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "nest"
   },
   "author": "prasad",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.13.2"
+    "parcel": "^2.13.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "reactdom": "^2.0.0"
   }
 }
