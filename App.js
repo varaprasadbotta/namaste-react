@@ -36,9 +36,9 @@ const Header = () => {
   return (
     <div className="Header">
       <img
+        className="nav-logo"
         alt="logo"
         src="https://img.freepik.com/premium-vector/online-food-order-logo-icon_61778-45.jpg"
-        className="nav-logo"
       ></img>
       <div className="nav-items">
         <ul className="nav-item">
