@@ -1,7 +1,42 @@
-#parent {
-    color: aqua;
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo {
+    width: 130px;
+}
+.nav-items > ul {
+    display: flex;
+}
+.nav-items > ul > li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0px 5px;
+}
+.nav-items {
+    font-size: 24px;
+}
+.res-card {
+    margin: 5px;
+    padding: 3px;
+    width: 200px;
+    background-color: lightgray;
+}
+.res-card:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+.res-logo {
+    width: 100%;
+    border: 10cm;
+    height: 200px;
+}
+.search {
+    padding: 10px;
+}
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#child {
-    color: orange;
-}
