@@ -141,7 +141,7 @@ const oneCardData = {
   },
 };
 //many mock data
-const moreData = [
+const resList = [
   {
     card: {
       card: {
@@ -829,13 +829,10 @@ const Body = () => {
     <div className="body">
       <div className="search">search</div>
       <div className="res-container">
-        <RestaurantCard resData={moreData[0]} />
-        <RestaurantCard resData={moreData[1]} />
-        <RestaurantCard resData={moreData[2]} />
-        <RestaurantCard resData={moreData[3]} />
-        <RestaurantCard resData={moreData[4]} />
-        <RestaurantCard resData={moreData[5]} />
-        <RestaurantCard resData={moreData[6]} />
+        {/* //<RestaurantCard resData={moreData} /> */}
+        {resList.map((restaurant) => (
+          <RestaurantCard key = {restaurant.card.card.info.id} resData={restaurant} />
+        ))}
       </div>
     </div>
   );
@@ -843,7 +840,7 @@ const Body = () => {
 //res-card
 const RestaurantCard = (props) => {
   const { resData } = props;
-  const info = resData.card.card.info;
+  const { name, cuisines, avgRating, sla } = resData.card.card?.info ;   
   return (
     <div className="res-card">
       <img
@@ -854,10 +851,10 @@ const RestaurantCard = (props) => {
           resData.card.card.info.cloudinaryImageId
         }
       ></img>
-      <h3>{info.name}</h3>
-      <h4>{info.cuisines.join(", ")}</h4>
-      <h4>{info.avgRating} stars</h4>
-      <h4>{info.sla.slaString}</h4>
+      <h3>{name}</h3>
+      <h4>{cuisines.join(", ")}</h4>
+      <h4>{avgRating} stars</h4>
+      <h4>{sla?.slaString}</h4>
     </div>
   );
 };
