@@ -1,0 +1,25 @@
+import { APP_LOGO } from "../utils/constants";
+
+const Header = () => {
+  return (
+    <div className="Header">
+      <div className="Img-Container">
+        <img
+          className="Logo"
+          alt="Company logo"
+          src={APP_LOGO}
+        ></img>
+      </div>
+      <div className="Nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About us</li>
+          <li>Contact us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Header;
