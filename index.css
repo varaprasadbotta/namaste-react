@@ -46,3 +46,28 @@
   display: flex;
   flex-wrap: wrap;
 }
+.TopRatedRestaurnat {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.ShimmerCard {
+  width: 200px;
+  height: 300px;
+  background-color: lightgray;
+  margin: 20px;
+}
+
+.ShimmerCard-Container {
+  flex-wrap: wrap;
+  display: flex;
+}
+.LogInBtn {
+  padding: 20px;
+}
+.filter {
+  display: flex;
+}
+.SearchBarContainer{
+  margin: 10px;
+}

@@ -3,7 +3,7 @@ import { CDN_LINK } from "../utils/constants";
 const RestaurantCard = (props) => {
   const { resData } = props;
   const { name, cuisines, avgRating, costForTwo, cloudinaryImageId } =
-    resData.card.card.info;
+    resData?.card?.card?.info;
   return (
     <div className="RestaurantCard">
       <img
