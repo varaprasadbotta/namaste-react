@@ -18,7 +18,7 @@
         - links
 
 
-useEffect:- 
+# useEffect:- 
         // useEffect will be called after component renders
         // it is not a maniditory to write dependceny array
         // when no dependceny array , useEffect  will be called every time component renders
