@@ -1,11 +1,12 @@
 import RestaurantCard from "./RestaurantCard";
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ShimmerUI from "./ShimmerUI";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
   const [filteredListOfApi, setFilteredListOfApi] = useState([]);
-  
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -66,10 +67,12 @@ const Body = () => {
       <div className="Res-Container">
         {filteredListOfApi.map((restaurant) => {
           return (
-            <RestaurantCard
+            <Link
               key={restaurant?.card?.card?.info?.id}
-              resData={restaurant}
-            />
+              to={"/RestaurantMenu/" + restaurant?.card?.card?.info?.id}
+            >
+              <RestaurantCard resData={restaurant} />
+            </Link>
           );
         })}
       </div>
